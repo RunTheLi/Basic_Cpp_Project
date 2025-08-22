@@ -39,17 +39,23 @@ int main(){
     cout << "second number";
     cin >> b;
 
-    switch (op) {
-        case '+': result = add(a, b); break;
-        case '-': result = subtract(a, b); break;
-        case '*': result = multiply(a, b); break;
-        case '/': result = divide(a, b); break;
-        default:
-            cout << "Invalid operator!" << endl;
-            return 1;
-    }
+    if (op == '+') {
+    cout << "Result: " << add(a, b) << endl;
+        } 
+    else if (op == '-') {
+    cout << "Result: " << subtract(a, b) << endl;
+        } 
+    else if (op == '*') {
+    cout << "Result: " << multiply(a, b) << endl;
+        } 
+    else if (op == '/') {
+    cout << "Result: " << divide(a, b) << endl;
+        } 
+    else {
+    cout << "Invalid operator!" << endl;
+        }
 
     cout << "Result: " << result << endl;
-    
+
     return 0;
 }
